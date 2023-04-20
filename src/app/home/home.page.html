@@ -14,7 +14,13 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div *ngIf="isIOS">
+      <ion-button (click)="openAppleMap()" >Open Pin (Apple Maps)</ion-button>
+      <ion-button (click)="openAppleMapDirections()">Open Directions (Apple Maps)</ion-button>
+    </div>
+    <div>
+      <ion-button (click)="openGoogleMap()">Open Pin (Google Maps)</ion-button>
+      <ion-button (click)="openGoogleMapDirections()">Open Directions (Google Maps)</ion-button>
+    </div>
   </div>
 </ion-content>
