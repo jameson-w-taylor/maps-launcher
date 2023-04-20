@@ -26,12 +26,12 @@ ionic capacitor sync ios
 <plist>
 <dict>
   ...
-
+  
   <key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>maps</string>
-		<string>comgooglemaps</string>
-	</array>
-</dict>
-</plist
+  <array>
+    <string>maps</string>
+    <string>comgooglemaps</string>
+  </array>
+  </dict>
+</plist>
 ```
