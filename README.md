@@ -32,6 +32,6 @@ ionic capacitor sync ios
     <string>maps</string>
     <string>comgooglemaps</string>
   </array>
-  </dict>
+</dict>
 </plist>
 ```
