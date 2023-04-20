@@ -22,7 +22,7 @@ ionic capacitor sync ios
 </manifest>
 ```
 - For iOS, you'll need to add this entry to `ios/App/App/Info.plist`
-```plist
+```xml
 <plist>
 <dict>
   ...
