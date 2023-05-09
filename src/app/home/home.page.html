@@ -1,26 +1,30 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> Launcher Example </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Launcher Example</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <div *ngIf="isIOS">
-      <ion-button (click)="openAppleMap()" >Open Pin (Apple Maps)</ion-button>
-      <ion-button (click)="openAppleMapDirections()">Open Directions (Apple Maps)</ion-button>
-    </div>
-    <div>
-      <ion-button (click)="openGoogleMap()">Open Pin (Google Maps)</ion-button>
-      <ion-button (click)="openGoogleMapDirections()">Open Directions (Google Maps)</ion-button>
-    </div>
-  </div>
+  <ion-card *ngFor="let example of launchExamples;">
+    <ion-card-header>
+      <ion-card-title>{{example.title}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      {{example.description}}
+      <pre [textContent]="example.data | json"></pre>
+    </ion-card-content>
+
+    <ion-toolbar>
+      <ion-buttons slot="end">
+        <ion-button (click)="launchMap(example.type)">Try Me</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-card>
 </ion-content>
